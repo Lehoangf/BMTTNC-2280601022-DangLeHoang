@@ -17,7 +17,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>30</x>
       <y>0</y>
       <width>291</width>
       <height>51</height>
@@ -25,6 +25,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy XBold</family>
       <pointsize>35</pointsize>
      </font>
     </property>
@@ -35,7 +36,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>30</x>
       <y>70</y>
       <width>141</width>
       <height>31</height>
@@ -43,6 +44,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy XBold</family>
       <pointsize>15</pointsize>
      </font>
     </property>
@@ -53,7 +55,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>30</x>
       <y>170</y>
       <width>141</width>
       <height>31</height>
@@ -61,6 +63,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy XBold</family>
       <pointsize>15</pointsize>
      </font>
     </property>
@@ -91,7 +94,7 @@
    <widget class="QPushButton" name="btn_gen_key">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>430</x>
       <y>20</y>
       <width>171</width>
       <height>31</height>
@@ -99,6 +102,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy Medium</family>
       <pointsize>15</pointsize>
      </font>
     </property>
@@ -117,6 +121,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy Medium</family>
       <pointsize>15</pointsize>
      </font>
     </property>
@@ -127,7 +132,7 @@
    <widget class="QPushButton" name="btn_verify">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>430</x>
       <y>270</y>
       <width>171</width>
       <height>51</height>
@@ -135,6 +140,7 @@
     </property>
     <property name="font">
      <font>
+      <family>SVN-Gilroy Medium</family>
       <pointsize>15</pointsize>
      </font>
     </property>
