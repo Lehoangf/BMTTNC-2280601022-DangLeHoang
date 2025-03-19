@@ -6,6 +6,43 @@ app = Flask(__name__)
 
 rsa_cipher = RSACipher()
 
+def caesar_encrypt(plain_text, key):
+    key = int(key)
+    encrypted_text = ""
+    for char in plain_text:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            encrypted_text += chr((ord(char) - shift + key) % 26 + shift)
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+def caesar_decrypt(cipher_text, key):
+    return caesar_encrypt(cipher_text, -int(key))
+
+@app.route('/api/caesar/encrypt', methods=['POST'])
+def encrypt():
+    data = request.json
+    plain_text = data.get("plain_text", "")
+    key = data.get("key", 0)
+    if not plain_text or not key:
+        return jsonify({"error": "Missing plain_text or key"}), 400
+    
+    encrypted_message = caesar_encrypt(plain_text, key)
+    return jsonify({"encrypted_message": encrypted_message})
+
+@app.route('/api/caesar/decrypt', methods=['POST'])
+def decrypt():
+    data = request.json
+    cipher_text = data.get("cipher_text", "")
+    key = data.get("key", 0)
+    if not cipher_text or not key:
+        return jsonify({"error": "Missing cipher_text or key"}), 400
+    
+    decrypted_message = caesar_decrypt(cipher_text, key)
+    return jsonify({"decrypted_message": decrypted_message})
+
+
 @app.route('/api/rsa/generate_keys', methods=['GET'])
 def rsa_generate_keys():
     rsa_cipher.generate_keys()
